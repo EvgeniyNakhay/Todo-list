@@ -97,13 +97,17 @@ function handleClose() {
 
 // Async logic
 async function getAllTodos() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const response = await fetch(
+    "https://jsonplaceholder.typicode.com/todos?_limit=15"
+  );
   const data = await response.json();
   return data;
 }
 
 async function getAllUsers() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const response = await fetch(
+    "https://jsonplaceholder.typicode.com/users?_limit=5"
+  );
   const data = await response.json();
   return data;
 }
